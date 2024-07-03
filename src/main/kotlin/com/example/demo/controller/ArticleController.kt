@@ -1,6 +1,6 @@
 package com.example.demo.controller
 
-import com.example.demo.model.ArticleMapper
+import com.example.demo.mapper.ArticleMapper
 import com.example.demo.dto.ArticleResponseDto
 import com.example.demo.service.ArticleService
 import com.example.demo.dto.CreateArticleRequestDto
