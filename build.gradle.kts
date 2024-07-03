@@ -49,9 +49,8 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 }
 
-tasks {
-	val consoleLauncherTest by registering(JavaExec::class) {
-		dependsOn(testClasses)
+tasks.register<JavaExec>("cucumberTest") {
+		dependsOn(tasks.test)
 		doFirst {
 			println("Running parallel test")
 		}
@@ -69,9 +68,3 @@ tasks {
 		)
 		systemProperty("cucumber.publish.quiet", true)
 	}
-
-	test {
-		dependsOn(consoleLauncherTest)
-		exclude("**/*")
-	}
-}
