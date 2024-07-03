@@ -7,16 +7,20 @@ see `src/test/resources/features/*.feature`.
 
 ## Run
 
+Run the REST service by:
+
 ```bash
 ./gradlew bootRun
 ```
 
 ## Inspect
 
+Inspect the REST API or the utilized H2 in-memory database by: 
+
 * [Swagger UI at http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 * [H2 database console at http://localhost:8080/h2/](http://localhost:8080/h2/) (*) 
 
-(*) Apply the JDBC URL `"jdbc:h2:mem:test"` for the H2 database console.
+(*) apply the JDBC URL `"jdbc:h2:mem:test"` for the H2 database console.
 
 ## Cucumber Test
 
